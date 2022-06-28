@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock title %}
+{% block body %}
+<div class="banner-bottom-strip">
+    <p>Hard work, Commitement and Opulence!</p>
+</div>
+<div class="container">
+    <style>
+        .height{
+            height: 100vh;
+        }
+        .vidsize{
+            width: 650px;
+            height: 468px;
+        }
+        @media (max-width:952px){
+            .vidsize{
+                width: 80%;
+                height: 100%;
+            }
+        }
+    </style>
+    <div class="row height">
+        <div class="col-md-1"></div>
+        <!-- {% for vid in vid  %} -->
+        <div class="col-md-10">
+            <br><br>
+             <div class="card">
+    
+    <div class="card-body">
+        <h5 class="card-title"></h5>
+<!-- <video src="{{vid.video.url}}"></video> -->
+{% if vid %}
+<video autoplay="autoplay" controls="controls" preload="preload" class="vidsize">
+    <source src="{{ video.url }}/{{ vid }}" type="video/mp4"></source>
+</video>
+{% else %}
+no videos available
+{% endif %}
+    </div>
+
+</div> 
+        </div>
+        <!-- {% endfor %} -->
+        <div class="col-md-1"></div>
+    </div>
+</div>
+{% endblock body %}

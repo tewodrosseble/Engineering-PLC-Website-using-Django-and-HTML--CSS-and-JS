@@ -1,0 +1,409 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<meta name="description" content="Nile-Tech Engineering PLC is a Multi-Disciplinary electro-mechanical and mechanical engineering company  founded by automotive and mechanical engineerings with years of experience.">
+	<meta name="keywords" content="niletech, nile-tech, engineering plc, engineering companies in ethiopia, niletechengineeringplc, Nile-Tech Engineering PLC, fisiha birhane">
+{% endblock head %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+
+	<div class="banner">
+							<!-- banner-text Slider starts Here -->
+							<script src="js/responsiveslides.min.js"></script>
+							<script>
+								// You can also use "$(window).load(function() {"
+									$(function () {
+									// Slideshow 4
+										$("#slider3").responsiveSlides({
+										auto: true,
+										pager:false,
+										nav:true,
+										speed: 500,
+										namespace: "callbacks",
+										before: function () {
+										$('.events').append("<li>before event fired.</li>");
+										},
+										after: function () {
+											$('.events').append("<li>after event fired.</li>");
+										}
+									});	
+								});
+							</script>
+							<!--//End-slider-script -->
+							<div class="banner-title"> 
+								 <div  id="top" class="callbacks_container">
+									{% comment %} <ul class="rslides" id="slider3">
+										 <li>
+											<div class="banner2">
+												<h2>Origin of industrial</h2>
+												<p>The uniform customer experiences they provide are triumphs of industrial engineering and efficiency systems management.</p>
+											</div>
+										</li> 
+										 <li>
+											<div class="banner1">
+												<h2>Industrial Engineer</h2>
+												<p>engineering applied to the planning, design, and control of industrial operations.of a industrial engineering today</p>
+											</div>
+										</li>
+										<li>
+											<div class="banner-slide">
+												<h2>Industrial Operated</h2>
+												<p>This small mark has two primary uses: to signify possession or omitted letters.Learn the correct uses of these commonly</p>
+											</div>
+										</li> 
+							</ul>
+			</div>{% endcomment %}
+			<style>
+				.wallpaper{
+					background-size: cover;
+					width: 100vw;
+					height: auto;
+					background: linear-gradient(rgba(48, 44, 44, 0.5),rgba(92, 86, 86, 0.5));
+					max-height: 80vh;
+				}
+				.bottom-text{
+					position: absolute;
+					bottom: 45px;
+					left: 16px;
+				}
+				.bottom-text1{
+					position:absolute;
+					bottom: 110px;
+					left: 18px;
+				}
+				.bottom-logo{
+					position: absolute;
+					bottom: 150px;
+					left: 16px;
+				}
+				
+				.coverh{
+					font-size: 55px;
+					font-family: Imapct;
+					font-weight: bold;
+					background-color: white;
+					color: rgb(255, 112, 16);
+				}.coverh2{
+					font-size: 48px;
+					font-family: Imapct;
+					font-weight: bold;
+					background-color: white;
+					color: rgba(24, 21, 241, 0.938);
+				}
+				.proimg{
+					max-width: 100vw;
+					max-height: 100vh;
+				}
+				.pt {
+					font-size: 11px;
+					font-family: monospace;
+					color: black;
+				}
+				@media(max-width:952px){
+
+					.wallpaper{
+					background-size: cover;
+					width: 100vw;
+					height: auto;
+					background: linear-gradient(rgba(48, 44, 44, 0.5),rgba(92, 86, 86, 0.5));
+					max-height: 100vh;
+				}
+
+				.bottom-text{
+					position: absolute;
+					bottom: 60px;
+					left: 16px;
+				}
+				.bottom-text1{
+					position:absolute;
+					bottom: 100px;
+					left: 18px;
+				}
+
+					.coverh2{
+					font-size: 28px;
+					font-family: Imapct;
+					font-weight: bold;
+					background-color: rgb(53, 51, 51);
+					color: rgba(24, 21, 241, 0.938);
+					}
+					
+					.coverh{
+					font-size: 28px;
+					font-family: Imapct;
+					font-weight: bold;
+					background-color: rgb(53, 51, 51);
+					color: rgb(255, 112, 16);	
+					}
+
+					.bottom-logo{
+					position: absolute;
+					 bottom: 150px; 
+					left: 38px;
+					width: 134px;
+					height: 118px;
+					}
+					.proimg{
+						max-width: 100%;
+						max-height: 100vh;
+					}
+				}
+
+			</style>
+			<div class="contaner-fluid">
+				<div class="row wallpaper">
+					<div class="col">
+						{% if cover %}
+						{% for covers in cover  %}
+						<img class="wallpaper" src="{{ covers.image.url }}" alt="cover" style="background-size: cover;">
+						{% endfor %}					
+						{% endif %}
+						<img class="bottom-logo" src="{% static 'images/logo.png' %}" alt="" >
+						<h1 class="bottom-text1 coverh">Nile-Tech Engineering PLC</h1>
+						<h1 class="bottom-text coverh2">ናይል ቴክ ኢንጅነሪንግ ኃ/የተ/የግል ማህበር</h1>
+						
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>		
+	<div class="banner-bottom-strip">
+		<div class="container">
+			<p>HardWork, Commitment and Opulence</p>
+		</div>
+	</div>	
+	<style>
+		.img1{
+			height: 250px;
+			width: 320px;
+		}
+	</style>
+	<div class="welcome">
+		<div class="container">
+			<h3>Industrial Technologies</h3>
+			<h5>We provide high quality industrial services.</h5>
+	<div id="products" class="products">
+					<div class="col-md-4 product-grid">
+							<a href="{% static 'images/power.jpg' %}" class="b-link-stripe b-animate-go1   swipebox"  title="">
+								<img src="{% static 'images/power.jpg' %}" alt=" " class="img-responsive img1" />
+							</a>
+							<div class="project-grid-text1">
+								<h4>Industrial Power Installation</h4>
+								<p>In 21st century power is a back bone of industries and factory plants.The utility of voltages and currents by the industries should be carefully maintained.</p>
+							</div>
+					</div>
+					<div class="col-md-4 product-grid">	
+							<a href="{% static 'images/a7.png' %}" class="b-link-stripe b-animate-go1   swipebox"  title="">
+								<img src="{% static 'images/a7.png' %}" alt=" " class="img-responsive img1" />
+							</a>
+							<div class="project-grid-text1">
+								<h4>Industrial Control and Automation</h4>
+								<p class="pt">The use of control systems, such as computers or robots, and information technologies for handling different processes and machineries in an industry.</p>
+							</div>
+					</div>
+					<div class="col-md-4 product-grid">
+							<a href="{% static 'images/a3.jpg' %}" class="b-link-stripe b-animate-go1   swipebox"  title="">
+								<img src="{% static 'images/a3.jpg' %}" alt=" " class="img-responsive img1" />
+							</a>
+							<div class="project-grid-text1">
+								<h4> Industrial Networking</h4>
+								<p class="pt">Dealing with transfer of data on a large scale to connect various devices across large spaces and enable communication between them by transfering huge chunks of data between them.</p>
+							</div>
+						</div>
+					<div class="col-md-4 product-grid">
+							<a href="{% static 'images/a4.jpg' %}" class="b-link-stripe b-animate-go1   swipebox"  title="">
+								<img src="{% static 'images/a4.jpg' %}" alt=" " class="img-responsive img1" />
+							</a>
+							<div class="project-grid-text1">
+								<h4> Industrial Security</h4>
+								<p class="pt">The portion of internal security that refers to the protection of industrial installations, resources, utilities, materials, and classified information essential to protect from loss or damage.</p>
+							</div>
+					</div>
+					<div class="col-md-4 product-grid">	
+							<a href="{% static 'images/a6.jpg' %}" class="b-link-stripe b-animate-go1   swipebox"  title="">
+								<img src="{% static 'images/a6.jpg' %}" alt=" " class="img-responsive img1" />
+							</a>
+							<div class="project-grid-text1">
+								<h4>Metal Works</h4>
+								<p class="pt">The process of shaping and reshaping metals to create useful objects, parts, assemblies, and large scale structures.</p>
+							</div>
+						</div>
+					<div class="col-md-4 product-grid">
+							<a href="{% static 'images/fire.jpeg' %}" class="b-link-stripe b-animate-go1   swipebox"  title="">
+								<img src="{% static 'images/fire.jpeg' %}" alt=" " class="img-responsive img1" />
+							</a>
+							<div class="project-grid-text1">
+								<h4> Fire Protection and Safety</h4>
+								<p class="pt"> The industrial plant has some of the most dangerous applications in the world and the most expensive assets to replace.Implementing fire safety systems is essential.</p>
+							</div>
+						</div>
+						<link rel="stylesheet" href="css/swipebox.css">
+							<script src="js/jquery.swipebox.min.js"></script> 
+								<script type="text/javascript">
+									jQuery(function($) {
+										$(".swipebox").swipebox();
+									});
+								</script>
+								<div class="clearfix"> </div>
+			</div>
+		</div>
+		</div>
+		
+	<div class="features">
+		<div class="container">
+			<h3>Newer Blogs</h3>
+			<h5></h5>
+			{% if blg %}
+			{% for blog in blg  %}
+			<div class="features-info">
+				<div class="col-md-6 features-left">
+					<a href="single.html"class="mask">
+						 <img src="{{blog.img.url}}" class="img-responsive zoom-img" style="max-width: 440px!important;" alt=""/>
+					</a>
+				</div>
+				<div class="col-md-6 features-right">
+					<h4>{{blog.title}}</h4>
+					<p>{{blog.body}}</p>
+						<a href="{% url 'blog' %}" class="hvr-bounce-to-bottom">Read More</a>
+				</div>
+				<div class="clearfix"> </div>
+		  </div>
+		  {% endfor %}
+		  {% else %}
+		  <h5>no post available</h5>
+		  {% endif %}
+		</div>
+	</div>
+	
+	<div class="features1">
+		<div class="container">
+			<h3>{{blg.title}}</h3>
+			<h5>{{blg.body}}.</h5>
+			<div class="features-info1">
+				<div class="col-md-6 features-right1">
+					<h4>About The Company</h4>
+					<p>Nile-Tech Engineering Plc., is Multi-Disciplinary Electro Mechanical and Information
+						Technology Company in Ethiopia. The company is established to provide service in power
+						system, control and automation system, air conditioner and refrigeration systems, Telecom
+						and Networking, security control and building automations, fire and safety systems, Metal
+						work engineering, reverse engineering and fabrications for both </p>
+						<a href="{% url 'about' %}" class="hvr-bounce-to-bottom">Read More</a>
+				</div>
+							<div class="col-md-6 features-left1">
+								<a href="{% url 'about' %}"class="mask">
+								  <img src="{% static 'images/fo1.jpg'%}" class="img-responsive zoom-img" alt=""/>
+							   </a>
+				</div>
+				<div class="clearfix"> </div>
+		  </div>
+		</div>
+	</div>
+	<style>
+		.hc{
+			font-size: 25px;
+			font-family: monospace;
+			font-weight: bold;
+		}
+		.pc{
+			font-size: 17px;
+			font-family: 'Times New Roman';
+		}
+		.img2 {
+			max-height:520px;
+			max-width:600px;
+		}
+		.serh{
+			font-family: 'Courier New';
+			font-size: 32px;
+			font-weight: bold;
+			text-align: center;
+		}
+		@media (max-width:952px){
+			.img2{
+			max-width: 100%;
+			max-height: 100%;
+			}
+		}
+	</style>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-9">
+					<h1 class="serh">Sample Services</h1>
+					<div class="card">
+						<div class="card-body">
+				{% for service in service %}
+							<img class="card-img img2" src="{{service.image.url}}" alt="">
+							<h5 class="card-title hc">{{service.title}}</h5>
+							<p class="card-text pc">{{service.description}}</p>
+							<br> <br> <hr> <br>
+							{% endfor %}
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+		 <div class="team-work">
+		  <div class="container">
+			 <h3 class="team">Services By Categories</h3>
+			 <div class="team-grids">
+				 <div class="col-md-3 team-grid">
+					 <img src="images/abt1.jpg" alt=""/>
+					 <h3><a href="{% url 'services' %}">Electrical And Electromechanical Serives</a></h3>
+					 <p>Electrical and electromechanical services and products ranging from single house installation up to industrial level installations.</p>
+				 </div>
+				 <div class="col-md-3 team-grid">
+					 <img src="images/abt2.jpg" alt=""/>
+					 <h3><a href="{% url 'services' %}">Mechanical Products and Services</a></h3>
+					 <p>Vehicles and mechanical machinaries production and maintenance with highly experienced professionals.</p>
+				 </div>
+				 <div class="col-md-3 team-grid">
+					 <img src="images/abt3.jpg" alt=""/>
+					 <h3><a href="{% url 'services' %}">Safety, Control and Automation Systems</a></h3>
+					 <p>Fire and saftey systems, security camera installation and alarming systems.</p>
+				 </div>
+				 <div class="col-md-3 team-grid">
+					 <img src="images/abt4.jpg" alt=""/>
+					 <h3><a href="{% url 'services' %}">IT and Software Products and Services</a></h3>
+					 <p>Software development and maintenance, cyber security and system administration.</p>
+				 </div>
+				 <div class="clearfix"> </div>
+			 </div>
+		 </div>
+
+	</div>
+	<div class="container">
+		<h3 class="team">Project Reference</h3>
+		<style>
+			.ct{
+				font-size: 29px;
+				font-family: 'Segoe UI';
+			}
+			.cc{
+				font-size: 19px;
+				font-family: 'Gill Sans';
+			}
+		</style>
+		<div class="row">
+			<div class="col-md-1"></div>
+			{% for reference in reference %}
+			<div class="col-md-10">
+				<div class="card">
+					<img class="card-img-top proimg" src="{{reference.image.url}}" alt="">
+					<div class="card-body">
+						<h5 class="cad-title ct">{{reference.title}}</h5>
+						<br>
+						<p class="cad-text cc">{{reference.text}}</p>
+					</div>
+		
+			<a href="{%url 'reference'%}" class="btn btn-primary">Show More</a>
+				</div>
+			</div>{% endfor %}
+		</div>
+		<br> <br> <hr class='hr2'> <br>
+	</div>
+	
+{% endblock body %}

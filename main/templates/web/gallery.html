@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Gallery
+{% endblock title %}
+{% block body %}
+{% comment %} <div class="banner-left">
+	<div class="banner-title"> 
+		<div  id="top" class="callbacks_container">
+			<ul class="rslides" id="slider3">
+				<li>
+					<div class="banner2 banner5">
+					</div>
+				</li>
+	</ul>
+</div>
+<div class="clearfix"> </div>
+</div>
+</div>		 {% endcomment %}
+<div class="banner-bottom-strip">
+<div class="container">
+<p>HardWork, Commitment and Opulence!</p>
+</div>
+</div>	
+<!--inner-page-about-->
+<!--light-box-files -->
+<script src="js/jquery.chocolat.js"></script>
+<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8" />
+<!--light-box-files -->
+<script type="text/javascript" charset="utf-8">
+$(function() {
+$('.moments-bottom a').Chocolat();
+});
+</script>
+<!--/light-box-files -->
+<div class="gallery">
+<div class="container">
+<h3>Gallery</h3>
+<div class="moments-bottom">
+<div class="moments-1">
+<div class="col-md-4 moments-left">
+	<a href="{% static 'images/g1.jpg' %}">
+		<img src="{% static 'images/g1.jpg' %}" alt="name" />
+	</a>
+</div>
+<div class="col-md-4 moments-left">
+	<a href="{% static 'images/g2.jpg' %}">
+		<img src="{% static 'images/g2.jpg' %}" alt="name" />
+	</a>
+</div>
+<div class="col-md-4 moments-left">
+	<a href="{% static 'images/g3.jpg' %}">
+		<img src="{% static 'images/g3.jpg' %}" alt="name" />
+	</a>
+</div>
+<div class="clearfix"> </div>
+</div>
+<div class="moments-1">
+<div class="col-md-4 moments-left">
+	<a href="{% static 'images/g4.jpg' %}">
+		<img src="{% static 'images/g4.jpg' %}" alt="name" />
+	</a>
+</div>
+<div class="col-md-4 moments-left">
+	<a href="{% static 'images/g5.jpg' %}">
+		<img src="{% static 'images/g5.jpg' %}" alt="name" />
+	</a>
+</div>
+<div class="col-md-4 moments-left">
+	<a href="{% static 'images/g6.jpg' %}">
+		<img src="{% static 'images/g6.jpg' %}" alt="name" />
+	</a>
+</div>
+<div class="clearfix"> </div>
+</div>
+<div class="moments-1">
+<div class="col-md-4 moments-left">
+	<a href="{% static 'images/g7.jpg' %}">
+		<img src="{% static 'images/g7.jpg' %}" alt="name" />
+	</a>
+</div>
+<div class="col-md-4 moments-left">
+	<a href="{% static 'images/g8.jpg' %}">
+		<img src="{% static 'images/g8.jpg' %}" alt="name" />
+	</a>
+</div>
+<div class="col-md-4 moments-left">
+	<a href="{% static 'images/g8.jpg' %}">
+		<img src="{% static 'images/g8.jpg' %}" alt="name" />
+	</a>
+</div>
+<style>
+	.box{
+	width: 100px;
+  	height:100px;
+  	display:inline-block;
+  	float :left;
+  /* background-color: red; */
+  margin-right: 6px;
+	}
+
+</style>
+
+<!-- <div class="container">
+	<div class="row">
+		bfdfyyafji4ykl0[abskzm,jhh{% if gallery %}
+	{% for galery  in gallery  %}
+	<div class="col">	
+<img src="{{galery.image.url}}" alt="img">
+	{% endfor %}
+	{% endif %}
+		</div>
+	</div>
+</div> -->
+<div class="clearfix"> </div>
+</div>
+</div>
+</div>
+</div>
+{% endblock body %}

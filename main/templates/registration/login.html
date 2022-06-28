@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock title %}
+{% block body %}
+<div class="container-fluid">
+    <div class="row" style="min-height: 80vh;">
+        <style>
+            .logh{
+                text-align: center;
+                font-family: 'Courier New';
+                font-weight: bold;
+                color: rgb(0, 81, 255);
+                text-decoration: dashed;
+            }
+        </style>
+        <br><br><br>
+        <h2 class="logh">Log In To Check Your Emails</h2>
+        <br> <br><br>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"><form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Log In</button>
+</form></div>
+        <div class="col-md-4">
+            
+            
+</div>
+    </div>
+</div>
+{% endblock body %}

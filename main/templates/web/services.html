@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}
+Services
+{% endblock title %}
+{% block body %}
+<div class="banner-bottom-strip">
+	<div class="container">
+	<p>Hardwork, Commitment and Opulence!</p>
+	</div>
+	</div>
+	<section>
+<div class="services">
+	<div class="container"><h3>Services</h3>
+		<div class="row">
+	
+			<style>
+				.service-img{
+					width:800px;
+					height:500px;
+					align-self:center;
+				}
+				.service-head {
+					font-size: 35px;
+					color: rgb(58, 31, 31);
+					text-align:center;
+					font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+				}
+				.service-body{
+					font-size: 25px;
+					font-family: Verdana;
+					color: black;
+				}
+				hr.hrs{
+					border: 4px orange dotted;
+					border-radius : 2px;
+				}
+				@media(max-width:952px){
+					.service-img{
+						width:400px;
+						height:350px;
+						align-self:center;
+					}
+				}
+				
+				</style>
+			<div class="col-md-2"></div>
+<div class="col-md-8">
+	{% for service in servicelist %}
+	<div class="card">
+		
+		<div class="card-body">
+			<img class="card-img-top service-img" src="{{ service.image.url }}" alt="img">
+			<h4 class="card-title service-head">{{service.title}}</h4>
+			<p class="card-text service-body">{{service.description}}</p>
+		</div>	
+		<br> <br> <hr class="hrs"> <br>
+	{% endfor %}	
+	</div>
+</div>
+</div>
+</div>
+</div>
+<br><br><br>
+<hr>
+</section>
+
+{% endblock body %}

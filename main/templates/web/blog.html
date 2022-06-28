@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block title %}Blog{% endblock title %}
+{% block body %}
+{% comment %} <div class="banner-left">
+	<div class="banner-title"> 
+		<div  id="top" class="callbacks_container">
+			<ul class="rslides" id="slider3">
+				<li>
+					<div class="banner2 banner5">
+					</div>
+				</li>
+	</ul>
+</div>
+<div class="clearfix"> </div>
+</div>
+</div>		 {% endcomment %}
+<div class="banner-bottom-strip">
+<div class="container">
+<p>Hardwork, Commitment and Opulence!</p>
+</div>
+</div>	
+<!--inner-page-blog-->
+<style>
+.blog-img{
+	width:100%;
+	height:600px;
+}
+@media(max-width:952px){
+	.blog-img{
+		width:100%;
+		height:500px;
+	}
+}
+
+.blgtitle{
+	font-family: 'Courier New', Courier;
+	font-size: 34px;
+	color: black;
+
+}
+.blgtext{
+	font-family: 'Times New Roman', Times;
+	color: black;
+	font-size: 23px;
+}
+hr.hr1 {
+            width: 60vw;
+  border-top: 1px dashed rgb(235, 186, 186);
+}
+hr.hr2{
+	border: 3px solid green;
+	border-radius: 2px;
+}
+
+</style>
+<div class="blog">
+<div class="container">
+	<h3>Blog</h3>
+	<br>
+	<hr>
+	<div class="row " style="min-height: 100vh;">
+		
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			{% if blg %}
+			<div class="card" style="background-color:rgb(225, 233, 233); border-color:darkblue;">
+				{% for blog in blg %}
+			  <img class="card-img-top blog-img" src="{{blog.img.url}}" alt="">
+			  <div class="card-body">
+				<h4 class="card-title blgtitle">{{blog.title}}</h4>
+				<p class="card-text blgtext">{{blog.body}}</p>
+				<p>{{blog.date}}</p>	<br>
+				<hr class="hr2">
+				<br><br>
+				{% endfor %}
+			  </div>
+			</div>
+		
+			{% else %}
+			<h2 class="text-danger">No Blog Available!</h2>
+			{% endif %}
+			</div>
+		<div class="col-md-1"></div>
+	</div>
+</div>
+
+
+<nav>
+<ul class="pagination">
+<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+<li class="active"><a href="#">1 <span class="sr-only"></span></a></li>
+<li><a href="#">2 <span class="sr-only"></span></a></li>
+<li><a href="#">3 <span class="sr-only"></span></a></li>
+<li><a href="#">4 <span class="sr-only"></span></a></li>
+<li><a href="#">5 <span class="sr-only"></span></a></li>
+ <li> <a href="#" aria-label="Next"><span aria-hidden="true">»</span> </a> </li>
+</ul>
+</nav>
+</div>
+</div>
+<!-- //blog -->
+
+</div>
+</div>
+{% endblock body %}
+</div>

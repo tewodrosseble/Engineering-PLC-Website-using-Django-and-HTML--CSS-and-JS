@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}
+Certificates
+{% endblock title %}
+{% block body %}
+<div class="banner-bottom-strip">
+    <p>Hardwork, Commitment and Opulence!</p>
+    
+</div>
+<style>
+    .certh{
+        font-family: 'Franklin Gothic Medium';
+        font-size: 23px;
+        color: blue;
+        text-decoration: underline;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    hr.hr4{
+        border: 4px blue solid;
+        border-radius: 2pxs;
+    }
+    @media (max-width:980px){
+        .certh{
+        font-family: 'Franklin Gothic Medium';
+        font-size: 23px;
+        color: blue;
+        text-decoration: underline;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    hr.hr4{
+        border: 4px blue solid;
+        border-radius: 2pxs;
+    }  
+    .certimg {
+        max-width: 100%!important;
+        /* max-height: 100%; */
+    }
+    }
+</style>
+<div class="services">
+<div class="container">
+    <h3 >Certificates</h3>
+    <div class="row">
+        <div class="col-md-1"></div>
+       
+        <div class="col-md-10"> {% for cert in cert  %}
+<div class="card">
+    <img class="card-img-top" src="" alt="">
+    <div class="card-body">
+        <h5 class="card-title certh">{{cert.title}}</h5>
+        <br><br>
+    </div>
+    <img class="card-img-bottom certimg" src="{{cert.image.url}}" alt="">
+</div>
+        <br> <br> <hr class="hr4"> <br>  {% endfor %}</div>
+      <div class="col-md-1"></div> 
+       
+    </div>
+
+    <a href="https://niletechengineering.com:2096/cpsess4831234907/3rdparty/roundcube/?_task=mail&_mbox=INBOX">check email</a>
+</div>
+</div>
+
+{% endblock body %}

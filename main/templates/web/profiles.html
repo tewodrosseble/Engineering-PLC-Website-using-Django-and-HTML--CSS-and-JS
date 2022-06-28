@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+Emails and Activities
+{% endblock title %}
+{% block body %}
+<div class="container">
+    <div class="row" style="min-height: 100vh;">
+        <div class="col">
+            <h1>View Your activities here!</h1>
+            {% if user.is_autheticated %}
+            <a href="{%url 'logout'%}">LOGOUT</a>
+            {% else %}
+            no log in
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+{% endblock body %}

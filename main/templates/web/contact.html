@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block title %}Contact Us{% endblock title %}
+{% block body %}
+<div class="banner-bottom-strip">
+<div class="container">
+<p>HardWork, Commitment and Opulence!</p>
+</div>
+</div>	
+<!--inner-page-about-->
+<div class="contact">
+<div class="container">
+<h3>Contact</h3>
+<div class="contact-main">
+<div class="contact-top">
+<div class="col-md-6 contact-top-left">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2651.8042923296966!2d38.75653765982737!3d9.012011454273498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85c720ba6cdb%3A0x226837e070aa7b00!2sYeha%20city%20center!5e0!3m2!1sen!2set!4v1645171566606!5m2!1sen!2set" width="" height="" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+<div class="col-md-6 contact-top-right">
+	<div class="contact-textarea">
+		<form action="mailto:contact@niletechengineering.com" method="post">
+			<input type="text" value="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}"/>
+			<input type="text" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}"/>
+			<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}"/>
+			<textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
+			<input type="submit" value="SUBMIT" >
+			<input type="reset" value="CLEAR" >
+		</form>
+	</div>
+ <!-- social links -->
+<style>
+	.s1{
+		font-size: 64px;
+		text-align: center;
+		color: cadetblue;
+		text-indent: 0.8em;
+	}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+ .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+</style>
+
+</div>
+
+
+<div class="clearfix"></div>
+</div>
+</div>
+<br><br> <br>
+<h3>Social Links</h3>
+</div><div class="col-md-3"></div>
+<div class="col-md-8">
+	<a href="https://www.facebook.com/niletechengineeringplc" class="s1"><i class="fa fa-facebook-square" aria-hidden="true" ></i><span class="tooltiptext="Facebook"></span></a>&nbsp;
+	<a href="" class="s1"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+	<a href="https://t.me/niletechengineeringplc" class="s1"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+	<a href="" class="s1"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+	<a href="mailto:niletechengineeringplc@gmail.com" class="s1"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
+	<a href="https://" class="s1"><i class="fa fa-comment" aria-hidden="true"></i></a>
+	<a href="" class="s1"><i class="fa fa-wechat" aria-hidden="true"></i></a>
+</div>
+<div class="col-md-2"></div>
+<br><br><br>
+<hr>
+</div>
+</div>
+</div>{% endblock body %}

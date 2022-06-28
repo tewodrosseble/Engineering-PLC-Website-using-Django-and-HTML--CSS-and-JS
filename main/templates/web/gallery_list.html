@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}
+Gallery
+{% endblock title %}
+
+{% block body %}
+{% for gallery in page_obj  %}
+<div class="container">
+    <style>
+        .galpic{
+            height: 600px;
+            width: 100%;
+        }
+        @media (max-width:952px){
+            .galpic{
+                height:400px;
+                width: 89%;
+            }
+        }
+        .arrows {
+            font-size: 42px;
+        }
+        hr.hr3 {
+            border: 4px dotted green;
+            border-radius: 2px;
+        }
+        .txt1{
+            font-family: monospace;
+            font-size: 42px;
+        }
+    </style>
+    <div class="row" >
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <img class="galpic" src="{{gallery.img.url}}" alt="glry">
+        </div>
+     <div class="col-md-1"></div>
+    
+
+</div>   <br> <hr class="hr3"><br>
+</div>
+{% endfor %}
+<div class="conatiner">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-9">
+
+<span>
+    {% if page_obj.has_previous %}
+    <a href='?page=1' class="txt1">&laquo; First</a>
+    <a href='?page={{page_obj.previous_page_number}}'><i class="fa fa-arrow-circle-left arrows" aria-hidden="true"></i></a>
+    {% endif %}
+    <span class='txt1'>
+        Page{{page_obj.number}} of{{page_obj.paginator.num_pages}}
+    </span>
+    {% if page_obj.has_next %}
+    <a href='?page={{page_obj.next_page_number}}' ><i class="fa fa-arrow-circle-right arrows" aria-hidden="true"></i></a>
+    <a href='?page={{page_obj.pagintor.num_pages}}' class="txt1">last&raquo;</a>
+     {% else %}
+     {% endif %}
+</span>
+</div>
+</div>
+</div>
+{% endblock body %}
+
